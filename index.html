@@ -13,8 +13,12 @@
   <script src="js/main.js"></script>
 
   <!-- cdn -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="css/6-1-8.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/6-1-8.css"> -->
+
+  <!-- gallery -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/6-2-1.css">
 
 
 </head>
@@ -37,23 +41,26 @@
   </header>
 
   <div id="mainvisual">
-    
-    <ul class="slider">
-      <li><img src="img/barusa-dog.png" alt=""></li>
-      <li><img src="img/barusa-dog.png" alt=""></li>
-      <li><img src="img/barusa-dog.png" alt=""></li>
-      <li><img src="img/barusa-dog.png" alt=""></li>
-      <li><img src="img/barusa-dog.png" alt=""></li>
-      <li><img src="img/barusa-dog.png" alt=""></li>
-    </ul>
-    <ul class="slider">
-      <li><img src="img/barusa-dog.png" alt=""></li>
-      <li><img src="img/barusa-dog.png" alt=""></li>
-      <li><img src="img/barusa-dog.png" alt=""></li>
-      <li><img src="img/barusa-dog.png" alt=""></li>
-      <li><img src="img/barusa-dog.png" alt=""></li>
-      <li><img src="img/barusa-dog.png" alt=""></li>
-    </ul>
+    <ul class="gallery">
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      <li><a href="img/barusa-dog.png" data-lightbox="gallery1" data-title="キャプション"><img src="img/barusa-dog.png" alt=""></a></li>
+      </ul>
 
   </div>
 
@@ -181,9 +188,12 @@
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-<script src="js/6-1-8.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+  lightbox.option({
+    'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
+    'albumLabel': ' %1 / total %2 '//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
+  })
+  <script src="js/6-2-1.js"></script>
 
 
 
