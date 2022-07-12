@@ -3,12 +3,17 @@
 html {
   font-size: 100%;
   color: white;
+  background-color: black;
 }
 
 body{
-  background-color: black;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
+}
+
+main {
+  background-color: black;
+  z-index: -2;
 }
 
 li {
@@ -39,23 +44,6 @@ a {
 
 
 
-/*==================================================
-スライダーのためのcss
-===================================*/
-.slider img {
-  width:100%;/*スライダー内の画像を横幅100%に*/
-  height:auto;
-}
-
-/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
-
-.slider .slick-slide {
-  margin:0 10px;/*スライド左右の余白調整*/
-}
-
-
-
-
 /* ------------------------------
 header
 ------------------------------ */
@@ -82,7 +70,7 @@ header
 
 .navi.active {
   visibility: visible;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .navi ul {
@@ -167,9 +155,63 @@ mainvisual
 #mainvisual {
   width: 100%;
   height: 100vh;
-  background-color:gray;
+  position: relative;
 }
 
+.video-area {
+  position: fixed;
+  z-index: -1;/*最背面に設定*/
+  top: 0;
+  right:0;
+  left:0;
+  bottom:0;
+  overflow: hidden;
+}
+
+.darkbox {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:black;
+  opacity: 0.9;
+}
+
+#video {
+  /*天地中央配置*/
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
+}
+
+#mainvisual h1{
+  /*要素の配置*/
+  position:absolute;
+  /*要素を天地中央寄せ*/
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  /*見た目の調整*/
+  color:#fff;
+  text-shadow: 0 0 15px #666;
+}
+
+#mainvisual p{
+  /*要素の配置*/
+  position:absolute;
+  /*要素を天地中央寄せ*/
+  top: 55%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  /*見た目の調整*/
+  color:#fff;
+  text-shadow: 0 0 15px #666;
+}
 
 /* ------------------------------
 profile
@@ -323,7 +365,7 @@ activities
 works
 ------------------------------ */
 #works {
-  color: black;
+  color: white;
   height: 500px;
 }
 
@@ -455,6 +497,11 @@ background:#eee;
 /* ------------------------------
 footer
 ------------------------------ */
+footer {
+  background-color: black;
+  padding: 15px 0;
+}
+
 #footer p{
   text-align: center;
   font-size: 0.7rem;
